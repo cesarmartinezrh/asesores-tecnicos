@@ -1,4 +1,5 @@
 [
+    {"clave":  "default", "nombre": "Seleccione una entidad"},
     { "clave": "AGS", "nombre": "AGUASCALIENTES" },
     { "clave": "BC",  "nombre": "BAJA CALIFORNIA" },
     { "clave": "BCS", "nombre": "BAJA CALIFORNIA SUR" },

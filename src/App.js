@@ -1,7 +1,6 @@
 import GlobalStyle from "./GlobalStyle";
 import Header from "./components/Header";
 import MainContainer from './components/MainContainer'
-import SearchBar from './components/SearchBar'
 import ContentTable from "./components/ContentTable";
 
 function App() {
