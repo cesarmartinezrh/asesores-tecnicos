@@ -26,7 +26,7 @@ const HeaderImg = styled.img`
 const Header = ({ img, title }) => {
   return (
     <Container>
-      <a href={"/"}>
+      <a href={"/asesores-tecnicos/"}>
         <HeaderImg src={img} />
       </a>
       <Title>{title}</Title>

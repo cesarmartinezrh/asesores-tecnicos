@@ -23,6 +23,7 @@ const ContentTable = () => {
   const [searchType, setSearchType] = useState("default");
   const [state, setState] = useState("Seleccione una entidad");
   const [search, setSearch] = useState("");
+  const [capTec, setCapTec] = useState("default")
 
   const filteredData = useMemo(() => {
     switch (searchType) {
@@ -37,10 +38,12 @@ const ContentTable = () => {
             .toUpperCase()
             .includes(search.trim().toUpperCase())
         );
+      case "capacidad":
+        return data.filter((asesor) => asesor.ct === capTec)
       default:
         return null;
     }
-  }, [search, state]);
+  }, [search, state, capTec]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -60,6 +63,10 @@ const ContentTable = () => {
   const handleValueChange = ({ target }) => {
     setSearchValue(target.value);
   };
+
+  const handleCapacidadChange = ({target}) => {
+    setCapTec(target.value)
+  }
 
   return (
     <>
@@ -84,10 +91,45 @@ const ContentTable = () => {
               <MenuItem value={"default"}>Seleccione una opción...</MenuItem>
               <MenuItem value={"folio"}>Folio de Asesor</MenuItem>
               <MenuItem value={"estado"}>Entidad Federativa</MenuItem>
+              <MenuItem value={"capacidad"}>Capacidad Técnica</MenuItem>
               <MenuItem value={"nombre"}>Nombre de Asesor</MenuItem>
             </Select>
           </FormControl>
-          {isState === false && searchType !== "default" ? (
+
+          {searchType === "capacidad" ? (
+          <FormControl>
+            <InputLabel id="capacidad-type">Capacidad Técnica</InputLabel>
+            <Select
+              labelId="capacidad-type"
+              id="capacidadSelect"
+              value={capTec}
+              label="Capacidad Técnica"
+              onChange={handleCapacidadChange}
+            >
+              <MenuItem value={"default"}>Seleccione una opción...</MenuItem>
+              <MenuItem value={"DESARROLLO DE LA CADENA PRODUCTIVA"}>Desarrollo de la cadena productiva</MenuItem>
+              <MenuItem value={"ESTUDIOS FORESTALES"}>Estudios Forestales</MenuItem>
+              <MenuItem value={"FIRA"}>FIRA</MenuItem>
+              <MenuItem value={"FND"}>FND</MenuItem>
+              <MenuItem value={"FORTALECIMIENTO DEL CAPITAL HUMANO"}>Fortalecimiento del Capital Humano</MenuItem>
+              <MenuItem value={"INSTITUCION EXTENSIONISTA"}>Institución Extensionista</MenuItem>
+              <MenuItem value={"REFORESTACION Y SUELOS"}>Reforestación y Suelos</MenuItem>
+              <MenuItem value={"SANEAMIENTO FORESTAL"}>Saneamiento Forestal</MenuItem>
+              <MenuItem value={"SERVICIOS AMBIENTALES"}>Servicios Ambientales</MenuItem>
+              <MenuItem value={"SERVICIOS AMBIENTALES UNIDAD 01"}>Servicios Ambientales Unidad 01</MenuItem>
+              <MenuItem value={"SERVICIOS AMBIENTALES UNIDAD 01 Y 02"}>Servicios Ambientales Unidad 01 y 02</MenuItem>
+              <MenuItem value={"SILVICULTURA UNIDAD 01"}>Silvicultura Unidad 01</MenuItem>
+              <MenuItem value={"SILVICULTURA UNIDAD 01 Y 02"}>Silvicultura Unidad 01 y 02</MenuItem>
+              <MenuItem value={"SILVICULTURA UNIDAD 01, 02 Y 03"}>Silvicultura Unidad 01, 02 y 03</MenuItem>
+              <MenuItem value={"SILVICULTURA UNIDAD 02"}>Silvicultura Unidad 02</MenuItem>
+              <MenuItem value={"SILVICULTURA UNIDAD 02 Y 03"}>Silvicultura Unidad 02 y 03</MenuItem>
+              <MenuItem value={"SILVICULTURA UNIDAD 03"}>Silvicultura Unidad 03</MenuItem>
+              <MenuItem value={"SISTEMAS DE INFORMACION GEOGRAFICA"}>Sistemas de Información Geográfica</MenuItem>
+            </Select>
+          </FormControl>
+          ) : null}
+
+          {isState === false && searchType !== "default" && searchType !== "capacidad" ? (
             <>
               <FormControl>
                 <TextField
