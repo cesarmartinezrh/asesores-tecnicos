@@ -1,5 +1,9 @@
 [
   {
+    "id": 0,
+    "captec": "Seleccione una opción..."
+  },
+  {
     "id": 1,
     "captec": "Desarrollo De La Cadena Productiva"
   },

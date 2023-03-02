@@ -24,7 +24,7 @@ const SearchEngine = () => {
         typeofsearch: "default",
         search: "",
         state: "Seleccione una entidad",
-        captec: "Desarrollo De La Cadena Productiva",
+        captec: "Seleccione una opción...",
         rfn: "default",
       }}
     >
