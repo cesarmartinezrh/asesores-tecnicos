@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "captec": "Desarrollo De La Cadena Productiva"
+  },
+  {
+    "id": 2,
+    "captec": "Estudios Forestales"
+  },
+  {
+    "id": 3,
+    "captec": "Fira"
+  },
+  {
+    "id": 4,
+    "captec": "Fnd"
+  },
+  {
+    "id": 5,
+    "captec": "Fortalecimiento Del Capital Humano"
+  },
+  {
+    "id": 6,
+    "captec": "Fortalecimiento Del Capital Social"
+  },
+  {
+    "id": 7,
+    "captec": "Institucion Extensionista"
+  },
+  {
+    "id": 8,
+    "captec": "Reforestacion Y Suelos"
+  },
+  {
+    "id": 9,
+    "captec": "Saneamiento Forestal"
+  },
+  {
+    "id": 10,
+    "captec": "Servicios Ambientales"
+  },
+  {
+    "id": 13,
+    "captec": "Silvicultura Unidad 01"
+  },
+  {
+    "id": 16,
+    "captec": "Silvicultura Unidad 02"
+  },
+  {
+    "id": 18,
+    "captec": "Silvicultura Unidad 03"
+  },
+  {
+    "id": 19,
+    "captec": "Sistemas De Informacion Geografica"
+  }
+]

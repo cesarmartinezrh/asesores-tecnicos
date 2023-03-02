@@ -7,7 +7,7 @@ const Container = styled.div`
   width: 100%;
   height: 10%;
   padding: 0 20px;
-  background-color: var(--wine);
+  background-color: var(--green);
 `;
 
 const Title = styled.h1`
@@ -23,13 +23,38 @@ const HeaderImg = styled.img`
   filter: brightness(0) invert(1);
 `;
 
-const Header = ({ img, title }) => {
+const Subtitle = styled.h2`
+  color: white;
+  font-size: 12px;
+
+  @media screen and (min-width: 767px) {
+    font-size: 25px;
+  }
+`;
+
+const Anchor = styled.a`
+  width: 30%;
+
+  @media screen and (min-width: 767px) {
+    width: 80%;
+  }
+`;
+
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Header = ({ img, title, subtitle }) => {
   return (
     <Container>
-      <a href={"/asesores-tecnicos/"}>
+      <Anchor href={"/asesores-tecnicos/"}>
         <HeaderImg src={img} />
-      </a>
-      <Title>{title}</Title>
+      </Anchor>
+      <TitleContainer>
+        <Title>{title}</Title>
+        <Subtitle>{subtitle}</Subtitle>
+      </TitleContainer>
     </Container>
   );
 };

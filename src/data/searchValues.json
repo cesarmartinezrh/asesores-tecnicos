@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "searchlabel": "Seleccione una opción...",
+        "searchkey": "default"
+    },
+    {
+        "id": 1,
+        "searchlabel": "Entidad Federativa",
+        "searchkey": "state"
+    },
+    {
+        "id": 2,
+        "searchlabel": "Folio de Asesor",
+        "searchkey": "folio"
+    },
+    {
+        "id": 3,
+        "searchlabel": "Razón Social",
+        "searchkey": "rs"
+    },
+    {
+        "id": 4,
+        "searchlabel": "RFN",
+        "searchkey": "rfn"
+    },
+    {
+        "id":5,
+        "searchlabel": "Capacidad Técnica",
+        "searchkey": "captec"
+    }
+]
