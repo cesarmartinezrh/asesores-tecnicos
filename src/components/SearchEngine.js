@@ -25,7 +25,7 @@ const SearchEngine = () => {
         search: "",
         state: "Seleccione una entidad",
         captec: "Desarrollo De La Cadena Productiva",
-        rfn: "si",
+        rfn: "default",
       }}
     >
       {({ values, handleChange }) => (
@@ -79,6 +79,7 @@ const SearchEngine = () => {
                   value={values.rfn}
                   onChange={handleChange}
                 >
+                  <MenuItem value={"default"}>Seleccione una opción...</MenuItem>
                   <MenuItem value={"si"}>SI</MenuItem>
                   <MenuItem value={"no"}>NO</MenuItem>
                 </Select>
