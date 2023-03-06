@@ -64,8 +64,8 @@ const ContentTable = ({ values }) => {
           <TableRow>
             <TableCell sx={tableCellStyle}>Estado</TableCell>
             <TableCell sx={tableCellStyle}>Folio de Asesor</TableCell>
-            <TableCell sx={tableCellStyle}>Nombre</TableCell>
-            <TableCell sx={tableCellStyle}>Razón Social</TableCell>
+            <TableCell sx={tableCellStyle}>Representante Legal</TableCell>
+            <TableCell sx={tableCellStyle}>Asesor Técnico</TableCell>
             <TableCell sx={tableCellStyle}>Tipo de Persona</TableCell>
             <TableCell sx={tableCellStyle}>Capacidades Técnicas</TableCell>
             <TableCell sx={tableCellStyle}>
